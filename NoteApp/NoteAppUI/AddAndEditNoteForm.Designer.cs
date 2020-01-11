@@ -1,6 +1,6 @@
 ﻿namespace NoteAppUI
 {
-	partial class AddAndEditForm
+	partial class AddAndEditNoteForm
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.TitleLabel = new System.Windows.Forms.Label();
 			this.CategoryLabel = new System.Windows.Forms.Label();
 			this.CreatedLabel = new System.Windows.Forms.Label();
@@ -37,8 +38,10 @@
 			this.ModifiedLabel = new System.Windows.Forms.Label();
 			this.ModifiedDateTimeLabel = new System.Windows.Forms.Label();
 			this.NoteTextBox = new System.Windows.Forms.TextBox();
-			this.CancelBtn = new System.Windows.Forms.Button();
-			this.OkBtn = new System.Windows.Forms.Button();
+			this.CancelButton = new System.Windows.Forms.Button();
+			this.OkButton = new System.Windows.Forms.Button();
+			this.OkButtonToolTip = new System.Windows.Forms.ToolTip(this.components);
+			this.CancelButtonToolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.SuspendLayout();
 			// 
 			// TitleLabel
@@ -100,7 +103,6 @@
 			this.ModifiedLabel.Size = new System.Drawing.Size(50, 13);
 			this.ModifiedLabel.TabIndex = 6;
 			this.ModifiedLabel.Text = "Modified:";
-			this.ModifiedLabel.Click += new System.EventHandler(this.label2_Click);
 			// 
 			// ModifiedDateTimeLabel
 			// 
@@ -120,32 +122,33 @@
 			this.NoteTextBox.Size = new System.Drawing.Size(522, 328);
 			this.NoteTextBox.TabIndex = 8;
 			// 
-			// CancelBtn
+			// CancelButton
 			// 
-			this.CancelBtn.Location = new System.Drawing.Point(463, 415);
-			this.CancelBtn.Name = "CancelBtn";
-			this.CancelBtn.Size = new System.Drawing.Size(75, 23);
-			this.CancelBtn.TabIndex = 9;
-			this.CancelBtn.Text = "Cancel";
-			this.CancelBtn.UseVisualStyleBackColor = true;
+			this.CancelButton.Location = new System.Drawing.Point(463, 415);
+			this.CancelButton.Name = "CancelButton";
+			this.CancelButton.Size = new System.Drawing.Size(75, 23);
+			this.CancelButton.TabIndex = 9;
+			this.CancelButton.Text = "Cancel";
+			this.CancelButton.UseVisualStyleBackColor = true;
+			this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
 			// 
-			// OkBtn
+			// OkButton
 			// 
-			this.OkBtn.Location = new System.Drawing.Point(382, 415);
-			this.OkBtn.Name = "OkBtn";
-			this.OkBtn.Size = new System.Drawing.Size(75, 23);
-			this.OkBtn.TabIndex = 10;
-			this.OkBtn.Text = "OK";
-			this.OkBtn.UseVisualStyleBackColor = true;
-			this.OkBtn.Click += new System.EventHandler(this.button2_Click);
+			this.OkButton.Location = new System.Drawing.Point(382, 415);
+			this.OkButton.Name = "OkButton";
+			this.OkButton.Size = new System.Drawing.Size(75, 23);
+			this.OkButton.TabIndex = 10;
+			this.OkButton.Text = "OK";
+			this.OkButton.UseVisualStyleBackColor = true;
+			this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
 			// 
-			// AddAndEditForm
+			// AddAndEditNoteForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(553, 450);
-			this.Controls.Add(this.OkBtn);
-			this.Controls.Add(this.CancelBtn);
+			this.Controls.Add(this.OkButton);
+			this.Controls.Add(this.CancelButton);
 			this.Controls.Add(this.NoteTextBox);
 			this.Controls.Add(this.ModifiedDateTimeLabel);
 			this.Controls.Add(this.ModifiedLabel);
@@ -155,9 +158,8 @@
 			this.Controls.Add(this.CreatedLabel);
 			this.Controls.Add(this.CategoryLabel);
 			this.Controls.Add(this.TitleLabel);
-			this.Name = "AddAndEditForm";
+			this.Name = "AddAndEditNoteForm";
 			this.Text = "Add/Edit Note";
-			this.Load += new System.EventHandler(this.AddAndEditForm_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -174,7 +176,9 @@
 		private System.Windows.Forms.Label ModifiedLabel;
 		private System.Windows.Forms.Label ModifiedDateTimeLabel;
 		private System.Windows.Forms.TextBox NoteTextBox;
-		private System.Windows.Forms.Button CancelBtn;
-		private System.Windows.Forms.Button OkBtn;
+		private System.Windows.Forms.Button CancelButton;
+		private System.Windows.Forms.Button OkButton;
+		private System.Windows.Forms.ToolTip OkButtonToolTip;
+		private System.Windows.Forms.ToolTip CancelButtonToolTip;
 	}
 }
