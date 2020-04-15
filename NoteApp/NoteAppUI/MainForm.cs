@@ -9,7 +9,7 @@ namespace NoteAppUI
 	public partial class MainForm : Form
 	{
 		/// <summary>
-		/// Хранит номер текущей заметки.
+		/// Хранит текущую выбранную заметку.
 		/// </summary>
 		private Note _selectedNote;
 		public Note SelectedNote { get; set; }
