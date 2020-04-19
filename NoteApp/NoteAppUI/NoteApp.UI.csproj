@@ -112,6 +112,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>"C:\Program Files (x86)\Inno Setup 6\ISCC.exe" $(SolutionDir)InstallScripts\installer.iss</PostBuildEvent>
+    <PostBuildEvent>md "$(SolutionDir)InstallScripts\Installers"
+md "$(SolutionDir)InstallScripts\Release"
+for /r "$(ProjectDir)$(OutDir)" %25%25f in (*.dll, *.exe) do @xcopy "%25%25f" "$(SolutionDir)InstallScripts\Release\"
+"C:\Program Files (x86)\Inno Setup 6\ISCC.exe" $(SolutionDir)InstallScripts\installer.iss
+rd /s /q "$(SolutionDir)InstallScripts\Release"</PostBuildEvent>
   </PropertyGroup>
 </Project>
